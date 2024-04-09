@@ -35,12 +35,11 @@ const checkLoto = (firstname, lastname, email, lotoNumbers) => {
     winningNumbers.includes(number)
   );
   if (isWinner) {
-    alert("Bravo, tu as gagné!");
+    alert("Félicitations, vous avez gagné 1 million!!!!!");
   } else {
-    alert("Désolé, tu as perdu.");
+    alert(`Désolé, vous avez perdu, les nombres gagnants sont: ${winningNumbers.join(", ")}`);
   }
 
-  alert("bravo tu as gagné");
   return true;
 };
 
@@ -51,7 +50,7 @@ form.addEventListener("submit", function (event) {
   const email = document.getElementById("email").value;
   const lotoNumbers = document.getElementById("lotoNumbers").value;
 
-  console.log("Numéros Loto entrés:", lotoNumbers);
+  
 
   const isValid = checkLoto(firstname, lastname, email, lotoNumbers); // Appel de la fonction checkLoto pour vérifier les entrées
 });
